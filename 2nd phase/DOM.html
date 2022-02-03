@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    
+    <a href="#">Google</a>
+
+    <div id="mydiv" style="background-color: rgb(235, 22, 22);">
+        <h1>Hello !</h1>
+        <h1>Good Bye !</h1>
+    </div>
+
+    <div id="mydiv2" style="background-color: rgb(22, 43, 235);">
+        <h1>Hello !</h1>
+        <h1>Good Bye !</h1>
+    </div>
+
+
+    <script>
+
+        //Creating HTML element
+        var heading3 = document.createElement("h1");
+        var text = document.createTextNode("This is heading 3");
+        heading3.appendChild(text);
+
+        document.getElementById("mydiv");
+        mydiv.appendChild(heading3);
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
