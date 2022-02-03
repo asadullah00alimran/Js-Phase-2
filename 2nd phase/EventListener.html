@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+
+    <style>
+        .name {
+            color: tomato;
+            font-size: 3rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="demo">click me</button>
+    <p class="para">Bangladesh</p>
+    <h1>My name is Asadullah Al Imran</h1>
+
+    <h2>You have not clicked any button</h2>
+    <button class="mybutton">button 1</button>
+    <button class="mybutton">button 2</button>
+    <button class="mybutton">button 3</button>
+
+    
+    <h3>Hurrah ! I am learning Java Script</h3>
+    <button class="golla">Golla 1</button>
+    <button class="golla">Golla 2</button>
+    <button class="golla">Golla 3</button>
+    <button class="golla">Golla 4</button>
+
+
+
+
+
+
+    <script>
+        document.querySelector("#demo").addEventListener("click", myFunction);
+
+        function myFunction() {
+            alert("hello !");
+        }
+
+        document.querySelector(".para").addEventListener("click", function () {
+            alert("I love my country");
+        });
+
+        var var1 = document.querySelector("h1");
+        var1.addEventListener("mouseover", function () {
+            var1.classList.add("name");
+        });
+        var1.addEventListener("mouseout", function () {
+            var1.classList.remove("name");
+        });
+
+
+        document.querySelectorAll(".mybutton")[0].addEventListener("click",function(){
+            var text = this.innerHTML;
+            document.querySelector("h2").innerHTML = text + " is clicked";
+
+        });
+        document.querySelectorAll(".mybutton")[1].addEventListener("click",function(){
+            var text = this.innerHTML;
+            document.querySelector("h2").innerHTML = text + " is clicked";
+
+        });
+        document.querySelectorAll(".mybutton")[2].addEventListener("click",function(){
+            var text = this.innerHTML;
+            document.querySelector("h2").innerHTML = text + " is clicked";
+
+        });
+
+        var len = document.querySelectorAll(".golla").length
+        for( var i = 0; i<len; i++){
+            document.querySelectorAll(".golla")[i].addEventListener("click",function(){
+                var text2 = this.innerHTML;
+                document.querySelector("h3").innerHTML = text2 + " is clicked";
+            });
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
